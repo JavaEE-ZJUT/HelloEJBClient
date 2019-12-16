@@ -16,26 +16,18 @@ public class OneToManyTest {
         // /HELLOEJB_war_exploded/OneToManyDAO!cn.xyy.ejb2.dao.OneToManyDAORemote
         final Hashtable jndiProperties = new Hashtable();
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
-
         final Context context = new InitialContext(jndiProperties);
         final String appName = "";
-
         final String moduleName = "HELLOEJB_war_exploded";
-
         final String distinctName = "";
-
         final String beanName = "OneToManyDAO";
-
         final String viewClassName = OneToManyDAORemote.class.getName();
-
         final String namespace = "ejb:" + appName + "/" + moduleName
                 + "/" + distinctName + "/" + beanName + "!" + viewClassName + "?stateful";
-
         System.out.println(namespace);
-
         return (OneToManyDAORemote) context.lookup(namespace);
-
     }
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         try{
